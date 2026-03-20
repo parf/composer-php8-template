@@ -1,9 +1,23 @@
-checkout `https://github.com/homebase/php-tools` somewhere
-run `./install all`
-create symlink: `ln -s $TOOLS_PATH/php-tools/bin tools`
+Install `php-tools` somewhere, for example:
 
-In order to have executable spartan tests you need to place `stest` symlink into your PATH 
+```bash
+mkdir -p ~/src
+cd ~/src
+git clone https://github.com/homebase/php-tools.git
+cd php-tools
+./php-tools install all
+```
 
-you can add `tools` directory or create symlinks in `~/bin` or `/usr/local/bin`
+After that, `php-tools` is on your `PATH`.
 
-@see [php-tools README](https://github.com/homebase/php-tools#install) file for more details
+Create the project-local `tools` symlink so the Composer scripts in this template can use the shared binaries:
+
+```bash
+ln -s ~/src/php-tools/bin tools
+```
+
+If your `php-tools` checkout lives somewhere else, point the symlink at that checkout's `bin/` directory instead.
+
+For `spartan-test`, make sure `stest` and `stest-all` are in your `PATH`. A normal `php-tools install` already handles that by linking the managed binaries into `~/bin` or `/usr/local/bin`.
+
+See the [php-tools README](https://github.com/homebase/php-tools) for current install and update details.

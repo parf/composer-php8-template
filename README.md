@@ -23,7 +23,24 @@
 * [spartan-test](https://github.com/parf/spartan-test) (phpunit alternative) + automated web-test framework
 * [psysh](https://developpaper.com/psysh-php-interactive-console/) - php cli shell
 
-[tools install instructions](setup-tools.howto)
+## Shared tools setup
+
+This template expects a `tools` symlink that points at the shared `php-tools` `bin/` directory.
+
+Example setup:
+
+```bash
+mkdir -p ~/src
+cd ~/src
+git clone https://github.com/homebase/php-tools.git
+cd php-tools
+./php-tools install all
+
+cd /path/to/your-project
+ln -s ~/src/php-tools/bin tools
+```
+
+See [setup-tools.howto](setup-tools.howto) for the full notes.
 
 # Scripts
 > `composer test`<br>
