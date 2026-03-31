@@ -1,5 +1,13 @@
 # PHP8/8.1 composer/packagist package template
 
+# UNSUPPORTED / OLD TEMPLATE
+
+This repository is no longer supported.
+
+Please use the current template instead:
+
+- https://github.com/parf/composer-php85-template/
+
 # INSTALL / How to Use:
 * `composer create-project parf/composer-php8-template` **your-project-name**
 * edit `composer.json`
